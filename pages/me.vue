@@ -4,11 +4,12 @@ definePageMeta({
     middleware: ['auth'],
 })
 
-  import axios from 'axios';
-  const {data: user} =  await axios.get("/user");
+  const {user} = useAuth();
   
 </script>
 <template>
-  <p><strong>User Name:</strong> Daniel</p>
-  <p><strong>User Email:</strong> test@test.com</p>
+  <p><strong>First Name:</strong> {{ user.first_name }}</p>
+  <p><strong>Last Name:</strong> {{ user.last_name }}</p>
+  <p><strong>Membership Number:</strong> {{ user.membership_number }}</p>
+  <p><strong>email:</strong> {{ user.email }}</p>
 </template>
