@@ -6,19 +6,13 @@ import axios from 'axios';
     middleware: ['guest'],
   });
 
-  interface LoginPayload{
-    email: string;
-    password: string
-  }
+ 
   const form = ref({
     email: "",
     password: ""
   })
 
-  async function login(payload: LoginPayload) {
-    await axios.post("/login", payload)
-    useRouter().push("me")
-  }
+  const {login} = useAuth();
 
 </script>
 <template>
