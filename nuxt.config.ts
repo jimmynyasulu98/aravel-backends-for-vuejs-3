@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     },
   },
   devServer: {
-    host: '127.0.0.1'
+    host: 'https://127.0.0.1'
   },
   routeRules: {
     "/profiles/*": { swr: true },

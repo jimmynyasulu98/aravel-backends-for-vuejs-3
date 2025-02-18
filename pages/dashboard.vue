@@ -33,7 +33,7 @@ definePageMeta({
       <!-- breadcrumb end -->
 
       <div class="lg:flex justify-between items-center mb-6">
-        <p class="text-m font-semibold mb-2 lg:mb-0">Good afternoon, <strong>{{ user.first_name }} {{ user.last_name }}</strong> </p>
+        <p class="text-2xl font-semibold mb-2 lg:mb-0">Good afternoon, {{ user.first_name }}</p>
         <button class="bg-blue-500 hover:bg-blue-600 focus:outline-none rounded-lg px-6 py-2 text-white font-semibold shadow">View Logs</button>
       </div>
 
@@ -47,7 +47,7 @@ definePageMeta({
 
             <div class="text-gray-700">
               <p class="font-semibold text-3xl">237</p>
-              <p>Pending invoices</p>
+              <p>Products Sold</p>
             </div>
 
           </div>
@@ -61,7 +61,7 @@ definePageMeta({
 
             <div class="text-gray-700">
               <p class="font-semibold text-3xl">177</p>
-              <p>Claims</p>
+              <p>Product Reviews</p>
             </div>
           </div>
         </div>
@@ -74,7 +74,7 @@ definePageMeta({
 
             <div class="text-gray-700">
               <p class="font-semibold text-3xl">31</p>
-              <p>Special Members</p>
+              <p>New Enquiries</p>
             </div>
           </div>
         </div>
@@ -86,8 +86,8 @@ definePageMeta({
             </svg>
 
             <div class="text-gray-700">
-              <p class="font-semibold text-3xl">653</p>
-              <p>Recent Amendments</p>
+              <p class="font-semibold text-3xl">1,653</p>
+              <p>Product Views</p>
             </div>
 
           </div>
@@ -114,38 +114,38 @@ definePageMeta({
         </div>
 
         <div class="w-full xl:w-1/3 px-3">
-          <p class="text-xl font-semibold mb-4">Pending Special Members</p>
+          <p class="text-xl font-semibold mb-4">Recent Transactions</p>
           <div class="w-full bg-white border rounded-lg p-4">
             <div class="w-full bg-gray-100 border rounded-lg flex justify-between items-center px-4 py-2 mb-4">
                 <div>
                     <p class="font-semibold text-xl">Trent Murphy</p>
                     <p>Product 1</p>
                 </div>
-                <span class="text-green-500 font-semibold text-lg">Zikomo</span>
+                <span class="text-green-500 font-semibold text-lg">$25.00</span>
             </div>
 
             <div class="w-full bg-gray-100 border rounded-lg flex justify-between items-center px-4 py-2 mb-4">
                 <div>
                     <p class="font-semibold text-xl">Joseph Brent</p>
-                    <p>Due on 31/03/2025</p>
+                    <p>Product 34</p>
                 </div>
-                <span class="text-green-500 font-semibold text-lg">Abale</span>
+                <span class="text-red-500 font-semibold text-lg">$74.99</span>
             </div>
 
             <div class="w-full bg-gray-100 border rounded-lg flex justify-between items-center px-4 py-2 mb-4">
                 <div>
                     <p class="font-semibold text-xl">Jacob Bator</p>
-                    <p>Due on 31/03/2025</p>
+                    <p>Product 23</p>
                 </div>
-                <span class="text-green-500 font-semibold text-lg">Comprehensive-EX</span>
+                <span class="text-green-500 font-semibold text-lg">$14.95</span>
             </div>
 
             <div class="w-full bg-gray-100 border rounded-lg flex justify-between items-center px-4 py-2">
                 <div>
                     <p class="font-semibold text-xl">Alex Mason</p>
-                    <p>Due on 31/03/2025</p>
+                    <p>Product 66</p>
                 </div>
-                <span class="text-green-500 font-semibold text-lg">Zikomo</span>
+                <span class="text-green-500 font-semibold text-lg">$44.99</span>
             </div>
           </div>
         </div>

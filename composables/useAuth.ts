@@ -39,7 +39,7 @@ export const useAuth = () => {
       }
     async function login(payload: LoginPayload) {
         await axios.post("/login", payload)
-        useRouter().push("me")
+        useRouter().push("/")
     }
 
     async function logout() {
@@ -54,4 +54,6 @@ export const useAuth = () => {
         initUser,
         user,
     }
+
+
 }
