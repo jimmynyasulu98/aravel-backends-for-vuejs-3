@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  imports: {
+    autoImport: true
+  },
   modules: ["@vueuse/nuxt", "@nuxtjs/tailwindcss", "@formkit/nuxt"],
   css: ["@/assets/main.css"],
   tailwindcss: {
@@ -13,5 +16,7 @@ export default defineNuxtConfig({
   routeRules: {
     "/profiles/*": { swr: true },
     "/*": { ssr: false },
+    "/staff/*": { ssr: false },
+    "/components/*": { ssr: false },
   },
 });

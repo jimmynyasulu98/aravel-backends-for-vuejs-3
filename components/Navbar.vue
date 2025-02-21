@@ -1,3 +1,28 @@
+<script setup>
+import "@/assets/main.css"
+definePageMeta({
+    middleware: ['auth'],
+})
+
+
+const {user} = useAuth();
+
+
+/* export default {
+    
+  
+    data() {
+        return {
+            dropDownOpen: false
+        }
+    },
+    methods: {
+        toggleSidebar() {
+            this.$store.dispatch('toggleSidebar')
+        }
+    }
+} */
+</script>
 <template>
     <div class="sticky top-0 z-40">
             <div class="w-full h-20 px-6 bg-gray-100 border-b flex items-center justify-between">
@@ -20,12 +45,15 @@
                       <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"/>
                     </svg>
                   </button>
+
                 </div>
               </div>
 
               <!-- right navbar -->
               <div class="flex items-center relative">
+                
                 <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="fill-current mr-3 hover:text-blue-500"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
+                <pre>{{ user.first_name }} {{ user.last_name }}</pre>
                 <img src="https://a7sas.net/wp-content/uploads/2019/07/4060.jpeg" class="w-12 h-12 rounded-full shadow-lg" @click="dropDownOpen = !dropDownOpen">
               </div>
 
@@ -42,21 +70,4 @@
     </div>
 </template>
 
-<script >
 
-
-export default {
-    
-  
-    data() {
-        return {
-            dropDownOpen: false
-        }
-    },
-    methods: {
-        toggleSidebar() {
-            this.$store.dispatch('toggleSidebar')
-        }
-    }
-}
-</script>

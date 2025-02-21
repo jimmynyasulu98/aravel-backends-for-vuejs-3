@@ -1,6 +1,17 @@
 <script setup>
-import "@/assets/main.css";
+
+definePageMeta({
+    middleware: ['auth'],
+})
+
+import axios from "axios"
+import "@/assets/main.css"
+const resp = await axios.get('/user')
+
+const {user} = useAuth();
+
 </script>
+
 <template>
   <div class="leading-normal tracking-normal" id="main-body">
     <div class="flex flex-wrap">
@@ -21,6 +32,3 @@ import "@/assets/main.css";
     </div>
   </div>
 </template>
-<script>
-
-</script>

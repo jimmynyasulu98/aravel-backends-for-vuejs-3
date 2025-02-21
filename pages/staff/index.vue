@@ -2,14 +2,10 @@
 
 
 definePageMeta({
-    layout: "layout",
+
+    middleware: ['auth'],
  
   });
-
-
-  definePageMeta({
-    middleware: ['auth'],
-})
 
   const {user} = useAuth();
  
